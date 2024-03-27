@@ -17,16 +17,5 @@
     --primary: #00e8c5;
     --secondary: #B479FF;
     --transparent: #ffffff00;
-}
-
-.background-gradiente {
-    border-radius: 1000px;
-    opacity: .5;
-    background: conic-gradient(from 137deg at 46.94% 54.99%, #7761FF 41deg, #AC7 115deg, #00E8C5 262deg);
-    width: 100vw;
-    height: 115vw;
-    filter: blur(200px);
-    position: absolute;
-    z-index: -1;
 
 }

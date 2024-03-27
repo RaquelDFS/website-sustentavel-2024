@@ -39,12 +39,13 @@ body {
     }
 
     .container {
-        max-width: 1145px;
+        max-width: 1580px;
         opacity: 0;
         transition: all 2s;
         transform: translateY(-100%);
         filter: blur(25px);
         min-height: 100vh;
+        padding: 0 3%;
 
         &.show {
             filter: blur(0);
@@ -52,6 +53,22 @@ body {
             opacity: 1 !important;
         }
     }
+
+    .grid {
+        display: grid;
+    }
+}
+
+.background-gradiente {
+    border-radius: 1000px;
+    opacity: .5;
+    background: conic-gradient(from 137deg at 46.94% 54.99%, #7761FF 41deg, #AC7 115deg, #00E8C5 262deg);
+    width: 100vw;
+    height: 115vw;
+    filter: blur(200px);
+    position: absolute;
+    z-index: -1;
+
 }
 
 @media screen and (max-width: 1145px) {

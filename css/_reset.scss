@@ -4,15 +4,15 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*
     2. Remove default margin
   */
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /*
@@ -21,8 +21,8 @@
     4. Improve text rendering
   */
 body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 /*
@@ -33,8 +33,8 @@ picture,
 video,
 canvas,
 svg {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 /*
@@ -44,24 +44,25 @@ input,
 button,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
 
 /*
     7. Avoid text overflows
   */
-p,
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    overflow-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1em;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 /*
@@ -69,5 +70,5 @@ ul {
   */
 #root,
 #__next {
-    isolation: isolate;
+  isolation: isolate;
 }
