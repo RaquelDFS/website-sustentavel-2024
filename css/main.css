@@ -1,0 +1,279 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul {
+  list-style: none;
+}
+
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*Fontes*/
+:root {
+  --ff-primary: "Roboto";
+  --fs-700: clamp(1.94rem, 5vw, 5.455rem);
+  --fs-600: clamp(1.94rem, 3.7vw, 3.758rem);
+  --fs-500: clamp(1.5rem, 3.7vw, 2.061rem);
+  --fs-400: 1.375rem;
+  --fs-300: 1rem;
+  --fs-200: 0.8rem;
+  --fw-link: 700;
+  /*Cores*/
+  --black: #000;
+  --gray: #8d8d8d;
+  --white: #fff;
+  --primary: #00e8c5;
+  --secondary: #B479FF;
+  --transparent: #ffffff00;
+}
+
+.background-gradiente {
+  border-radius: 1000px;
+  opacity: 0.5;
+  background: conic-gradient(from 137deg at 46.94% 54.99%, #7761FF 41deg, #AC7 115deg, #00E8C5 262deg);
+  width: 100vw;
+  height: 115vw;
+  filter: blur(200px);
+  position: absolute;
+  z-index: -1;
+}
+
+body {
+  font-family: var(--ff-primary);
+  background-color: var(--black);
+  color: var(--white);
+}
+body button {
+  background-color: var(--transparent);
+  color: var(--white);
+  border: 3px solid var(--primary);
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+body button:hover {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--black);
+  transform: translateY(-0.25em);
+  border-color: var(--white);
+}
+body button:hover a {
+  color: var(--white) !important;
+}
+body button a {
+  font-size: var(--fs-300);
+}
+body span {
+  color: var(--primary);
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .container {
+  max-width: 1145px;
+  opacity: 0;
+  transition: all 2s;
+  transform: translateY(-100%);
+  filter: blur(25px);
+  min-height: 100vh;
+}
+body .container.show {
+  filter: blur(0);
+  transform: translateY(0);
+  opacity: 1 !important;
+}
+
+@media screen and (max-width: 1145px) {
+  .container {
+    margin-top: 50px;
+    padding: 50px 90px;
+  }
+}
+header {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  background-color: var(--transparent);
+  transition: top 0.3s ease-in-out;
+  z-index: 1;
+}
+header nav.primary-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 80px;
+}
+header nav.primary-nav ul {
+  display: none;
+}
+header nav.primary-nav ul li a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: var(--fw-link);
+  transition: 0.25s;
+}
+header nav.primary-nav ul li a:hover {
+  color: var(--white);
+}
+
+@media screen and (min-width: 1145px) {
+  nav {
+    justify-content: space-between !important;
+  }
+  nav ul {
+    display: flex !important;
+    align-items: center;
+    gap: 35px;
+  }
+}
+main {
+  position: relative;
+  overflow-y: hidden;
+  width: 100vw;
+}
+main div#gradient-first {
+  top: 420px;
+  left: -30px;
+}
+main div#principal {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+main div#principal h1 {
+  font-size: var(--fs-700);
+  line-height: 1em;
+}
+main div#principal p {
+  font-size: var(--fs-400);
+}
+main div#principal p.large {
+  font-size: var(--fs-500);
+  font-weight: 300;
+  margin: 30px 0 0;
+}
+main div#principal p.small {
+  font-size: var(--fs-200);
+  color: var(--gray);
+}
+main div#principal .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 35px 0;
+  width: 100%;
+}
+main div#principal .form form {
+  width: 100%;
+}
+main div#principal .form form fieldset {
+  border: none;
+  background-color: var(--white);
+  border-radius: 50px;
+  padding-left: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-400);
+}
+main div#principal .form form fieldset input {
+  border-radius: 50px;
+  padding: 10px;
+  color: var(--gray);
+  border: none;
+}
+main div#principal .form form fieldset button {
+  padding: 0 60px;
+  border: none;
+  background-color: var(--secondary);
+}
+
+@media screen and (max-width: 1145px) {
+  #principal form fieldset {
+    background-color: var(--transparent) !important;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #principal form fieldset input {
+    padding: 10px 30px !important;
+  }
+  #principal form fieldset button {
+    align-self: center;
+    max-width: 200px;
+    padding: 10px 50px !important;
+  }
+}/*# sourceMappingURL=main.css.map */

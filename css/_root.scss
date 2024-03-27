@@ -1,0 +1,32 @@
+/*Fontes*/
+:root {
+    --ff-primary: "Roboto";
+
+    --fs-700: clamp(1.94rem, 5vw, 5.455rem);
+    --fs-600: clamp(1.94rem, 3.7vw, 3.758rem);
+    --fs-500: clamp(1.5rem, 3.7vw, 2.061rem);
+    --fs-400: 1.375rem;
+    --fs-300: 1rem;
+    --fs-200: 0.8rem;
+
+    --fw-link: 700;
+    /*Cores*/
+    --black: #000;
+    --gray: #8d8d8d;
+    --white: #fff;
+    --primary: #00e8c5;
+    --secondary: #B479FF;
+    --transparent: #ffffff00;
+}
+
+.background-gradiente {
+    border-radius: 1000px;
+    opacity: .5;
+    background: conic-gradient(from 137deg at 46.94% 54.99%, #7761FF 41deg, #AC7 115deg, #00E8C5 262deg);
+    width: 100vw;
+    height: 115vw;
+    filter: blur(200px);
+    position: absolute;
+    z-index: -1;
+
+}

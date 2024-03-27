@@ -1,0 +1,100 @@
+main {
+    position: relative;
+    overflow-y: hidden;
+    width: 100vw;
+
+    div#gradient-first {
+        top: 420px;
+        left: -30px;
+    }
+
+    div#principal {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        h1 {
+            font-size: var(--fs-700);
+            line-height: 1em;
+        }
+
+        p {
+            font-size: var(--fs-400);
+
+            &.large {
+                font-size: var(--fs-500);
+                font-weight: 300;
+                margin: 30px 0 0;
+            }
+
+            &.small {
+                font-size: var(--fs-200);
+                color: var(--gray);
+            }
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: 35px 0;
+            width: 100%;
+
+            form {
+                width: 100%;
+
+                fieldset {
+                    border: none;
+                    background-color: var(--white);
+                    border-radius: 50px;
+                    padding-left: 20px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: var(--fs-400);
+
+                    input {
+                        border-radius: 50px;
+                        padding: 10px;
+                        color: var(--gray);
+                        border: none;
+                    }
+
+                    button {
+                        padding: 0 60px;
+                        border: none;
+                        background-color: var(--secondary);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1145px) {
+    #principal {
+        form {
+            fieldset {
+                background-color: var(--transparent) !important;
+                flex-direction: column;
+                gap: 10px;
+
+                input {
+                    padding: 10px 30px !important;
+                }
+
+                button {
+                    align-self: center;
+                    max-width: 200px;
+                    padding: 10px 50px !important;
+                }
+            }
+        }
+    }
+}
