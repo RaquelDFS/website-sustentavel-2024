@@ -2,10 +2,7 @@ main {
     position: relative;
     overflow-y: hidden;
 
-    div#gradient-first {
-        top: 400px;
-        left: -30px;
-    }
+    
 
     div#principal {
         height: 100vh;
@@ -17,9 +14,6 @@ main {
         text-align: center;
         padding: 0px 10%;
 
-        h1 {
-            font-size: var(--fs-700);
-        }
 
         p {
             font-size: var(--fs-400);
@@ -76,8 +70,6 @@ main {
                         }
 
                     }
-
-
 
                     button {
                         padding: 0 60px;

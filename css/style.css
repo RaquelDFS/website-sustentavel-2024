@@ -125,25 +125,35 @@ body main {
   align-items: center;
   justify-content: center;
 }
+body a {
+  color: var(--primary);
+}
+body .grid {
+  display: grid;
+}
 body .container {
   max-width: 1580px;
+  width: 100%;
   opacity: 0;
   transition: all 2s;
   transform: translateY(-100%);
   filter: blur(25px);
-  min-height: 100vh;
   padding: 0 3%;
+  margin-bottom: 150px;
 }
 body .container.show {
   filter: blur(0);
   transform: translateY(0);
   opacity: 1 !important;
 }
-body .grid {
-  display: grid;
+@media screen and (max-width: 1145px) {
+  body .container {
+    padding: 8%;
+    max-width: 1080px;
+    margin-bottom: 80px;
+  }
 }
-
-.background-gradiente {
+body .background-gradiente {
   border-radius: 1000px;
   opacity: 0.5;
   background: conic-gradient(from 137deg at 46.94% 54.99%, #7761FF 41deg, #AC7 115deg, #00E8C5 262deg);
@@ -153,13 +163,23 @@ body .grid {
   position: absolute;
   z-index: -1;
 }
-
-@media screen and (max-width: 1145px) {
-  .container {
-    margin-top: 50px;
-    padding: 50px 90px;
-  }
+body .background-gradiente.top {
+  top: 400px;
+  left: -30px;
 }
+body .background-gradiente.medium {
+  top: 2500px;
+}
+body h1 {
+  font-size: var(--fs-700);
+}
+body h2 {
+  font-size: var(--fs-600);
+}
+body h3 {
+  font-size: var(--fs-500);
+}
+
 header {
   position: fixed;
   top: 0px;
@@ -202,10 +222,6 @@ main {
   position: relative;
   overflow-y: hidden;
 }
-main div#gradient-first {
-  top: 400px;
-  left: -30px;
-}
 main div#principal {
   height: 100vh;
   width: 100vw;
@@ -215,9 +231,6 @@ main div#principal {
   justify-content: center;
   text-align: center;
   padding: 0px 10%;
-}
-main div#principal h1 {
-  font-size: var(--fs-700);
 }
 main div#principal p {
   font-size: var(--fs-400);
@@ -301,9 +314,6 @@ section#secundaria {
   grid-template-columns: 1fr 2fr;
   gap: 80px;
 }
-section#secundaria h2 {
-  font-size: var(--fs-600);
-}
 section#secundaria .blocks {
   display: flex;
   flex-direction: column;
@@ -316,13 +326,13 @@ section#secundaria .blocks .block .img {
   display: flex;
   align-items: baseline;
   justify-content: center;
-  width: 550px;
   height: 150px;
+  min-width: 250px;
 }
 section#secundaria .blocks .block h3 {
   font-size: var(--fs-500);
   font-weight: 300;
-  margin: 20px;
+  margin: 20px 0;
 }
 section#secundaria .blocks .block p {
   margin-top: 10px;
@@ -348,13 +358,17 @@ section#secundaria .blocks .block p {
   }
 }
 section#selo {
-  margin: 100px 0;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 section#selo h2 {
   text-align: center;
   font-size: var(--fs-600);
   font-weight: 300;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 section#selo > div {
   display: flex;
@@ -367,7 +381,7 @@ section#selo > div .img {
 }
 section#selo > div p {
   font-size: var(--fs-300);
-  margin-bottom: 12px;
+  padding-bottom: 12px;
 }
 section#selo > div .link {
   display: flex;
@@ -397,5 +411,44 @@ section#selo > div .link img {
     display: flex;
     justify-content: center;
     text-align: center;
+  }
+}
+section#terceiro h2 {
+  text-align: center;
+}
+section#terceiro .block {
+  display: flex;
+  align-items: baseline;
+  gap: 50px;
+  font-size: var(--fs-500);
+  margin-top: 100px;
+}
+section#terceiro .block .contagem {
+  border-bottom: 1px solid var(--primary);
+  min-width: 150px;
+}
+section#terceiro .block .contagem p {
+  color: var(--primary) !important;
+}
+section#terceiro .block .info button {
+  padding: 10px 60px;
+  border: none;
+  background-color: var(--secondary);
+  display: flex;
+  align-items: center;
+}
+section#terceiro .block .info button img {
+  margin-left: 10px;
+  width: 30px;
+  transform: rotate(90deg);
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(348deg) brightness(200%) contrast(100%);
+}
+
+@media screen and (max-width: 1145px) {
+  section#terceiro .block {
+    flex-direction: column;
+  }
+  section#terceiro .block .contagem {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

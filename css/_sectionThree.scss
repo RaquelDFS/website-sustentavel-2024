@@ -1,11 +1,15 @@
 section#selo {
-    margin: 100px 0;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     h2 {
         text-align: center;
         font-size: var(--fs-600);
         font-weight: 300;
-        margin-bottom: 100px;
+        padding-bottom: 100px;
     }
 
     >div {
@@ -20,7 +24,7 @@ section#selo {
 
         p {
             font-size: var(--fs-300);
-            margin-bottom: 12px;
+            padding-bottom: 12px;
 
         }
 
@@ -44,6 +48,7 @@ section#selo {
 
 @media screen and (max-width:1145px) {
     section#selo {
+
         >div {
             flex-direction: column !important;
             align-items: center;

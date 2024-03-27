@@ -2,10 +2,6 @@ section#secundaria {
     grid-template-columns: 1fr 2fr;
     gap: 80px;
 
-    h2 {
-        font-size: var(--fs-600);
-    }
-
     .blocks {
         display: flex;
         flex-direction: column;
@@ -18,14 +14,14 @@ section#secundaria {
                 display: flex;
                 align-items: baseline;
                 justify-content: center;
-                width: 550px;
                 height: 150px;
+                min-width: 250px;
             }
 
             h3 {
                 font-size: var(--fs-500);
                 font-weight: 300;
-                margin: 20px;
+                margin: 20px 0;
             }
 
             p {

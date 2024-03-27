@@ -1,0 +1,53 @@
+section#terceiro {
+
+    h2 {
+        text-align: center;
+    }
+
+    .block {
+        display: flex;
+        align-items: baseline;
+        gap: 50px;
+        font-size: var(--fs-500);
+        margin-top: 100px;
+
+        .contagem {
+            border-bottom: 1px solid var(--primary);
+            min-width: 150px;
+
+            p {
+                color: var(--primary) !important;
+            }
+        }
+
+        .info {
+
+            button {
+                padding: 10px 60px;
+                border: none;
+                background-color: var(--secondary);
+                display: flex;
+                align-items: center;
+
+                img {
+                    margin-left: 10px;
+                    width: 30px;
+                    transform: rotate(90deg);
+                    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(348deg) brightness(200%) contrast(100%)
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1145px) {
+    section#terceiro {
+        .block {
+            flex-direction: column;
+
+            .contagem {
+                width: 100%;
+            }
+        }
+    }
+}
