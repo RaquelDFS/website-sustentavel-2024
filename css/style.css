@@ -317,7 +317,7 @@ main div#principal .form form fieldset button {
 
 @media screen and (max-width: 1145px) {
   #principal {
-    padding-top: 150px !important;
+    padding-top: 250px !important;
   }
   #principal form fieldset {
     background-color: var(--transparent) !important;
