@@ -156,7 +156,12 @@ body .container {
   transform: translateY(-100%);
   filter: blur(25px);
   padding: 0 3%;
+}
+body .container:not(:last-child) {
   margin-bottom: 150px;
+}
+body .container:last-child {
+  margin-bottom: 30px;
 }
 body .container.show {
   filter: blur(0);
@@ -567,5 +572,107 @@ section#impacto > .grid > .grid .block .info a:hover {
     width: 100%;
     display: flex;
     justify-content: center;
+  }
+}
+section#seven.purple {
+  width: 100%;
+  background-color: var(--secondary);
+}
+section#seven .container {
+  padding-top: 160px;
+  color: var(--black);
+}
+section#seven .container .grid {
+  grid-template-columns: 1fr 1fr 1fr 3fr;
+  gap: 150px;
+  margin-bottom: 50px;
+}
+section#seven .container .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 80px;
+}
+section#seven .container .info h2 {
+  width: 60%;
+  font-weight: 400;
+}
+section#seven .container .info button {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  background-color: var(--primary);
+  color: var(--black);
+}
+section#seven .container .info button:hover {
+  color: var(--white);
+}
+
+@media screen and (max-width: 1145px) {
+  section#seven .container .grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    text-align: center;
+    gap: 20px !important;
+  }
+  section#seven .container .info {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  section#seven .container .info h2 {
+    background-color: rgba(0, 0, 0, 0.164);
+  }
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+footer .container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 120px;
+}
+footer .container .info {
+  padding-bottom: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+footer .container .info p {
+  width: 60%;
+}
+footer .container .subtitle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .container .subtitle > div {
+  display: flex;
+  gap: 10px;
+}
+footer .container .subtitle > div a {
+  color: var(--white);
+}
+footer .container .subtitle > div a:hover {
+  cursor: pointer;
+  color: var(--primary);
+}
+
+@media screen and (max-width: 1145px) {
+  footer .container .info {
+    flex-direction: column;
+    gap: 80px;
+  }
+  footer .container .subtitle {
+    flex-direction: column;
+  }
+  footer .container .subtitle > p {
+    margin: 20px 0;
+    font-size: var(--fs-200);
   }
 }/*# sourceMappingURL=style.css.map */

@@ -74,7 +74,16 @@ body {
         transform: translateY(-100%);
         filter: blur(25px);
         padding: 0 3%;
-        margin-bottom: 150px;
+
+        &:not(:last-child) {
+            margin-bottom: 150px;
+
+        }
+
+        &:last-child {
+            margin-bottom: 30px;
+
+        }
 
         &.show {
             filter: blur(0);
