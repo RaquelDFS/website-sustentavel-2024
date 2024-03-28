@@ -259,7 +259,7 @@ main div#principal {
   text-align: center;
   padding-left: 10%;
   padding-right: 10%;
-  padding-top: 20%;
+  padding-top: 150px;
 }
 main div#principal p {
   font-size: var(--fs-400);
