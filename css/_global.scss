@@ -39,6 +39,11 @@ body {
 
         a {
             font-size: var(--fs-300);
+            color: var(--primary);
+
+            &:hover {
+                color: var(--white);
+            }
         }
     }
 

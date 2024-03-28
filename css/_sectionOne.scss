@@ -2,7 +2,7 @@ main {
     position: relative;
     overflow-y: hidden;
 
-    
+
 
     div#principal {
         height: 100vh;
@@ -12,7 +12,9 @@ main {
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: 0px 10%;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 20%;
 
 
         p {
